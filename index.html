@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(50%);
+        }
+        .rectangle{
+            width: 220px;
+            height: 200px;
+            background-color: black;
+        }
+        .buttons{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 7px;
+            color: white;
+        }
+        .red{
+            background-color: red;
+            padding: 5px;
+            border: none;
+            color: white;
+            border-radius: 4px;
+        }
+        .green{
+            background-color: green;
+            padding: 10px;
+            border: none;
+            color: white;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+        <div class="rectangle"></div>
+        <div class="buttons">
+            <button class="green" onclick="changeGreen()">change to green</button>
+        <button class="red" onclick="changeRed()">Change to red</button>
+        </div>
+    </div>
+    <script>
+        let rectangle = document.querySelector('.rectangle');
+        function changeGreen() {
+            rectangle.style.backgroundColor = 'green'
+        };
+        function changeRed() {
+            rectangle.style.backgroundColor = 'red'
+        }
+    </script>
+</body>
+</html>
