@@ -49,6 +49,30 @@
             display: flex;
             align-items: center;
         }
+        .triangle{
+            background-color: black;
+            padding: 10px;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            width: 80px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        };
+        .thin-line{
+            background-color: black;
+            padding: 10px;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            width: 80px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        };
     </style>
 </head>
 <body>
@@ -57,15 +81,40 @@
         <div class="buttons">
             <button class="circle" onclick="changeToCircle()">Circle</button>
         <button class="rectangle" onclick="changeToRectangle()">Rectangle</button>
+        <button class="triangle" onclick="toTriangle()">Triangle</button>
+        <button class="triangle" onclick="toThinLine()">Thin Line</button>
         </div>
     </div>
     <script>
         let rectangle = document.querySelector('.rectangleBox');
         function changeToCircle() {
             rectangle.style.borderRadius = '100%'
+            rectangle.style.backgroundColor = 'green';
+            rectangle.style.width = '';
+            rectangle.style.height = '';
         };
         function changeToRectangle() {
             rectangle.style.borderRadius = ''
+            rectangle.style.backgroundColor = 'green';
+            rectangle.style.width = '';
+            rectangle.style.height = '';
+        };
+        function toTriangle(){
+            rectangle.style.borderRadius = '';
+            rectangle.style.width = '0px';
+            rectangle.style.height = '0px';
+            rectangle.style.backgroundColor = 'transparent'
+            rectangle.style.borderLeft = '100px solid transparent';
+            rectangle.style.borderRight = '100px solid transparent';
+            rectangle.style.borderBottom = '150px solid green';
+        };
+        function toThinLine() {
+            rectangle.style.width = '220px';
+            rectangle.style.height = '2px';
+            rectangle.style.backgroundColor = ''
+            rectangle.style.borderLeft = '';
+            rectangle.style.borderRight = '';
+            rectangle.style.borderBottom = '';
         }
     </script>
 </body>
