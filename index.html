@@ -20,6 +20,11 @@
             width: 220px;
             height: 200px;
             background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: relative;
         }
         .buttons{
             width: 100%;
@@ -47,7 +52,6 @@
             width: 80px;
             height: 30px;
             display: flex;
-            align-items: center;
         }
         .triangle{
             background-color: black;
@@ -92,12 +96,14 @@
             rectangle.style.backgroundColor = 'green';
             rectangle.style.width = '';
             rectangle.style.height = '';
+            rectangle.textContent = document.querySelector('.circle').innerHTML
         };
         function changeToRectangle() {
             rectangle.style.borderRadius = ''
             rectangle.style.backgroundColor = 'green';
             rectangle.style.width = '';
             rectangle.style.height = '';
+            rectangle.textContent = document.querySelector('.rectangle').innerHTML;
         };
         function toTriangle(){
             rectangle.style.borderRadius = '';
